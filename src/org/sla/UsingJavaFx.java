@@ -4,7 +4,6 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.scene.image.Image;
 import javax.swing.text.html.ImageView;
@@ -41,6 +40,14 @@ public class UsingJavaFx extends Application {
         //Check box(s)
         CheckBox checkBox1 = new CheckBox("Choice 1");
         CheckBox checkBox2 = new CheckBox("Choice 2");
+
+        checkBox1.setOnAction(actionEvent -> {
+            System.out.println("Blue Pill");
+        });
+
+        checkBox2.setOnAction(actionEvent -> {
+            System.out.println("Red Pill");
+        });
 
         // Radio Button(s)
         RadioButton radioButton1 = new RadioButton("1");
