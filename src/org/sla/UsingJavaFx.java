@@ -47,6 +47,8 @@ public class UsingJavaFx extends Application {
         input3 = new FileInputStream("/Users/alyciaklot/Downloads/Guacardo.png");
         guacardoImage = new Image(input3);
         Guacardo = new ImageView(guacardoImage);
+        Guacardo.setFitHeight(267); Guacardo.setFitWidth(200);
+
 
 
             // Radio Button(s)
@@ -84,7 +86,7 @@ public class UsingJavaFx extends Application {
 
 
         // creating Layout
-        HBox thyLayout = new HBox(Tinykeanu,);
+        HBox thyLayout = new HBox(Tinykeanu, Tinysteve);
 
         // creating Scene
         Scene thyScene = new Scene(thyLayout);
