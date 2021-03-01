@@ -19,6 +19,8 @@ public class UsingJavaFx extends Application {
     Image dodgerImage; ImageView Dodger;
     Image leviImage; ImageView Levi;
 
+    ImageView imageView;
+
     FileInputStream input1; //Keanu
     FileInputStream input2; //Steve
     FileInputStream input3; //Guacardo
@@ -33,6 +35,7 @@ public class UsingJavaFx extends Application {
         // creating UI elements ??
 
         // Importing Image(s)
+
         input1 = new FileInputStream("/Users/alyciaklot/Downloads/Tiny Keanu.png");
         TinykeanuImage = new Image(input1);
         Tinykeanu = new ImageView(TinykeanuImage);
@@ -60,9 +63,16 @@ public class UsingJavaFx extends Application {
 
         //Thy Buttons/Menus/idk
 
+        //Toggle Button(s)
+        ToggleButton toggleButton1 = new ToggleButton("Choice 1");
+        toggleButton1.setOnAction(actionEvent -> userClicked1() );
+        ToggleButton toggleButton2 = new ToggleButton("Choice 2");
+
+
+
 
         // creating Layout
-        HBox thyLayout = new HBox(Tinykeanu);
+        HBox thyLayout = new HBox(toggleButton1, toggleButton2);
         // creating Scene
         Scene thyScene = new Scene(thyLayout);
         stage.setScene(thyScene);
@@ -74,5 +84,9 @@ public class UsingJavaFx extends Application {
 
     public static void main(String[] args) {
         Application.launch(args);
+    }
+
+    private void userClicked1() {
+        Tinykeanu.setImage(TinykeanuImage);
     }
 }
