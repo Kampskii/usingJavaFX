@@ -13,9 +13,17 @@ import java.io.FileNotFoundException;
 
 public class UsingJavaFx extends Application {
     // Fields for UI elements
-    Image TinykeanuImage; Image TinysteveImage; Image guacardoImage;
-    ImageView Tinykeanu; ImageView Tinysteve; ImageView Guacardo;
-    FileInputStream input;
+    Image TinykeanuImage;
+    Image TinysteveImage;
+    Image guacardoImage;
+
+    ImageView Tinykeanu;
+    ImageView Tinysteve;
+    ImageView Guacardo;
+
+    FileInputStream input1;
+    FileInputStream input2;
+    FileInputStream input3;
 
 
     @Override
@@ -26,19 +34,19 @@ public class UsingJavaFx extends Application {
 
         // Importing Image(s)
 
-        input = new FileInputStream("/Users/alyciaklot/Downloads/Tiny Keanu.png");
-        TinykeanuImage = new Image(input);
+        input1 = new FileInputStream("/Users/alyciaklot/Downloads/Tiny Keanu.png");
+        TinykeanuImage = new Image(input1);
         Tinykeanu = new ImageView(TinykeanuImage);
         Tinykeanu.setFitHeight(189); Tinykeanu.setFitWidth(150);
 
-        input = new FileInputStream("/Users/alyciaklot/Downloads/Tiny Steve Rogers.png");
-        TinysteveImage = new Image(input);
+        input2 = new FileInputStream("/Users/alyciaklot/Downloads/Tiny Steve Rogers.jpg");
+        TinysteveImage = new Image(input2);
         Tinysteve = new ImageView(TinysteveImage);
         Tinysteve.setFitHeight(190); Tinysteve.setFitWidth(190);
 
-        //input = new FileInputStream("/Users/alyciaklot/Downloads/Guacardo.png");
-        //guacardoImage = new Image(input);
-        //Guacardo = new ImageView(guacardoImage);
+        input3 = new FileInputStream("/Users/alyciaklot/Downloads/Guacardo.png");
+        guacardoImage = new Image(input3);
+        Guacardo = new ImageView(guacardoImage);
 
 
             // Radio Button(s)
@@ -76,7 +84,7 @@ public class UsingJavaFx extends Application {
 
 
         // creating Layout
-        HBox thyLayout = new HBox(Tinykeanu);
+        HBox thyLayout = new HBox(Tinykeanu,);
 
         // creating Scene
         Scene thyScene = new Scene(thyLayout);
