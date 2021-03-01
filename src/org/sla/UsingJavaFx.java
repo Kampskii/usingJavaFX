@@ -21,9 +21,11 @@ public class UsingJavaFx extends Application {
     ImageView Tinysteve;
     ImageView Guacardo;
 
-    FileInputStream input1;
-    FileInputStream input2;
-    FileInputStream input3;
+    FileInputStream input1; //Keanu
+    FileInputStream input2; //Steve
+    FileInputStream input3; //Guacardo
+    FileInputStream input4;
+    FileInputStream input5;
 
 
     @Override
@@ -48,7 +50,6 @@ public class UsingJavaFx extends Application {
         guacardoImage = new Image(input3);
         Guacardo = new ImageView(guacardoImage);
         Guacardo.setFitHeight(267); Guacardo.setFitWidth(200);
-
 
 
             // Radio Button(s)
@@ -77,16 +78,16 @@ public class UsingJavaFx extends Application {
         CheckBox checkBox2 = new CheckBox("Choice 2");
 
         // Check box(s) actions
-        checkBox1.setOnAction(actionEvent -> {
-            System.out.println("Blue Pill");
-        });
+        //checkBox1.setOnAction(actionEvent -> );
         checkBox2.setOnAction(actionEvent -> {
             System.out.println("Red Pill");
         });
 
+        //public static void userClicked1() {
+            //ImageView.set //}
 
         // creating Layout
-        HBox thyLayout = new HBox(Tinykeanu, Tinysteve);
+        HBox thyLayout = new HBox(Tinykeanu, Tinysteve, Guacardo);
 
         // creating Scene
         Scene thyScene = new Scene(thyLayout);
