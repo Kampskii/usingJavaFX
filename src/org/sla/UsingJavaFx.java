@@ -74,7 +74,7 @@ public class UsingJavaFx extends Application {
         group.getToggles().addAll(toggleButton1);
 
         //Menu Button
-        menuButton = new MenuButton("AOT", imageView1, menuItem1, menuItem2, menuItem3);
+        menuButton = new MenuButton("AOT", imageView2, menuItem1, menuItem2, menuItem3);
         menuItem1 = new MenuItem("Erwin Smith");
         menuItem1.setOnAction(actionEvent -> userClicked2() );
         menuItem2 = new MenuItem("Levi Ackerman");
@@ -83,7 +83,7 @@ public class UsingJavaFx extends Application {
         menuItem3.setOnAction(actionEvent -> userClicked4() );
 
         // creating Layout
-        HBox thyLayout = new HBox(toggleButton1, menuButton, imageView1, imageView2, imageView3, imageView4);
+        HBox thyLayout = new HBox(toggleButton1, menuButton, imageView1, imageView2);
         // creating Scene
         Scene thyScene = new Scene(thyLayout);
         // display Scene
@@ -113,13 +113,13 @@ public class UsingJavaFx extends Application {
     }
 
     private void userClicked3() {
-        imageView3.setImage(leviImage);
-        imageView3.setFitHeight(2);  imageView3.setFitWidth(310);
+        imageView2.setImage(leviImage);
+        imageView2.setFitHeight(2);  imageView3.setFitWidth(310);
     }
 
     private void userClicked4() {
-        imageView4.setImage(reinerImage);
-        imageView4.setFitHeight(252);  imageView4.setFitWidth(336);
+        imageView2.setImage(reinerImage);
+        imageView2.setFitHeight(252);  imageView4.setFitWidth(336);
     }
 
     public static void main(String[] args) {
